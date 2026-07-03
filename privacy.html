@@ -1,25 +1,15 @@
 <!doctype html>
-<!--
-  Privacy Policy — required for the Google Play listing.
-  ---------------------------------------------------------------------------
-  This policy reflects the app's actual data practices as described in the
-  feature brief. Before publishing, still confirm/replace:
-    • Contact email (privacy@getmaybelater.app) — must be a monitored inbox.
-    • The "Last updated" date if you revise it.
-    • OWNER NOTE: the app currently has NO in-app analytics opt-out — Firebase
-      Analytics/Crashlytics appear to be on by default. This policy states that
-      truthfully. If you target GDPR/CCPA markets you may want to add a consent
-      / opt-out control in the app and then soften §2.2 and §9 accordingly.
-  ---------------------------------------------------------------------------
--->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — MaybeLater</title>
 <meta name="description" content="How the MaybeLater Android app handles your data. Bookmarks stay on your device; analytics are anonymous and content-free.">
 <link rel="canonical" href="https://getmaybelater.app/privacy.html">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#6c5ce7">
+<meta name="theme-color" content="#faf9f6">
 <meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script src="assets/js/main.js" defer></script>
 
@@ -30,7 +20,7 @@
     <nav class="nav" data-nav aria-label="Primary">
       <a class="brand" href="./">
         <img class="brand__mark" src="assets/img/logo.svg" alt="" width="30" height="30">
-        <span>MaybeLater</span>
+        <span>Maybe<span class="brand__later">Later</span></span>
       </a>
       <button class="nav__toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -54,22 +44,23 @@
 
         <div class="callout">
           This policy explains how the <strong>MaybeLater</strong> mobile application
-          (“the app”, “we”, “us”) handles information. It covers the app only, not any
-          third-party websites you save or services you connect.
+          (“the app”) handles information. MaybeLater is a free app made by an
+          independent solo developer (“I” or “me”) — not a company. This policy covers
+          the app only, not any third-party websites you save or services you connect.
         </div>
 
         <nav class="toc" aria-label="Table of contents">
           <strong>Contents</strong>
           <ul>
             <li><a href="#summary">1. The short version</a></li>
-            <li><a href="#collect">2. Information we collect</a></li>
+            <li><a href="#collect">2. Information collected</a></li>
             <li><a href="#network">3. When data leaves your device</a></li>
             <li><a href="#ai">4. On-device AI</a></li>
             <li><a href="#backup">5. Cloud backup &amp; encryption</a></li>
             <li><a href="#storage">6. Storage &amp; retention</a></li>
             <li><a href="#thirdparty">7. Third-party services</a></li>
             <li><a href="#permissions">8. Device permissions</a></li>
-            <li><a href="#children">9. Analytics choices &amp; children</a></li>
+            <li><a href="#children">9. Analytics &amp; children</a></li>
             <li><a href="#rights">10. Your rights</a></li>
             <li><a href="#changes">11. Changes</a></li>
             <li><a href="#contact">12. Contact</a></li>
@@ -83,14 +74,14 @@
           <li>Optional cloud backup is <strong>end-to-end encrypted</strong> and saved to <strong>your own Google Drive</strong> — not to any MaybeLater server.</li>
           <li>To enrich and check your links, the app <strong>contacts the websites you save</strong>.</li>
           <li>The app sends <strong>anonymous, content-free</strong> usage analytics and crash reports via Google Firebase — <strong>never</strong> your URLs, titles, notes, bookmark content, or account email.</li>
-          <li>There is <strong>no MaybeLater account and no MaybeLater backend</strong> storing your data.</li>
+          <li>There is <strong>no MaybeLater account and no MaybeLater backend</strong> storing your data, and I have no access to your bookmarks.</li>
         </ul>
 
-        <h2 id="collect">2. Information we collect</h2>
+        <h2 id="collect">2. Information collected</h2>
         <h3>2.1 Content you create</h3>
-        <p>When you save or edit a bookmark, the app stores the information that makes it up — the URL, title, thumbnail, description, your tags and collection, any note, the reminder time, read/unread state, the AI-generated summary, and the last link-check status. This content is created and kept by you in the app's on-device database. We do not receive or store it on our servers, because there are none.</p>
+        <p>When you save or edit a bookmark, the app stores the information that makes it up — the URL, title, thumbnail, description, your tags and collection, any note, the reminder time, read/unread state, the AI-generated summary, and the last link-check status. This content is created and kept by you in the app's on-device database. It is never received or stored on any server of mine, because there are none.</p>
         <h3>2.2 Information collected automatically</h3>
-        <p>The app integrates Google Firebase to help us keep it reliable:</p>
+        <p>The app integrates Google Firebase to help keep it reliable:</p>
         <ul>
           <li><strong>Firebase Analytics</strong> — anonymous, aggregate usage events (for example, which features are used and whether an action succeeded or failed). By design these events contain <strong>no URLs, titles, bookmark content, or personal information</strong>.</li>
           <li><strong>Firebase Crashlytics</strong> — crash and diagnostic reports used to find and fix stability problems.</li>
@@ -117,7 +108,7 @@
           <li>You control the schedule (Daily, Weekly, Biweekly, or Monthly) and can back up or restore on demand. The app shows your connected account and the last backup/restore time and status.</li>
           <li>Removing your passcode automatically disables cloud sync, since the encryption key depends on it.</li>
         </ul>
-        <p>Your use of Google Drive is also governed by Google's terms and privacy policy.</p>
+        <p>Because the encryption key stays on your device, <strong>a forgotten passcode cannot be recovered and the backup cannot be decrypted by me or anyone else</strong>. Your use of Google Drive is also governed by Google's terms and privacy policy.</p>
 
         <h2 id="storage">6. Storage &amp; retention</h2>
         <p>Your bookmarks are stored in the app's local database on your device and remain until you delete them or uninstall the app. Uninstalling removes the app's local data from your device. Any encrypted backups you created in your Google Drive remain there until you delete them from your Drive. You can also export your bookmarks to a file (plain or password-encrypted JSON) and import them again later.</p>
@@ -129,7 +120,7 @@
           <li><strong>Google Drive</strong> — only if you enable cloud backup; stores your encrypted backup files in your own account.</li>
           <li><strong>The websites you bookmark</strong> — contacted directly to fetch metadata and to run link-health checks. Those sites may log the request as they would any visit.</li>
         </ul>
-        <p>There is no first-party MaybeLater backend that stores your bookmarks.</p>
+        <p>There is no first-party MaybeLater backend that stores your bookmarks. I am not responsible for the practices of these third-party services.</p>
 
         <h2 id="permissions">8. Device permissions</h2>
         <ul>
@@ -139,18 +130,18 @@
           <li><strong>Biometrics</strong> — only if you enable biometric unlock for the app lock; used solely to unlock the app on your device.</li>
         </ul>
 
-        <h2 id="children">9. Analytics choices &amp; children</h2>
-        <p><strong>Analytics.</strong> The anonymous analytics and crash reporting described in §2.2 are collected automatically while you use the app; the current version does not include an in-app switch to disable them. You can limit some device-level analytics identifiers through your Android and Google account settings, and you may contact us with any questions or requests regarding this data.</p>
-        <p><strong>Children.</strong> The app is not directed to children under 13 (or the minimum age of digital consent in your jurisdiction), and we do not knowingly collect personal information from them.</p>
+        <h2 id="children">9. Analytics &amp; children</h2>
+        <p><strong>Analytics.</strong> The anonymous analytics and crash reporting described in §2.2 are collected automatically while you use the app; the current version does not include an in-app switch to disable them. You can limit some device-level analytics identifiers through your Android and Google account settings.</p>
+        <p><strong>Children.</strong> The app is not directed to children under 13 (or the minimum age of digital consent in your jurisdiction), and I do not knowingly collect personal information from them.</p>
 
         <h2 id="rights">10. Your rights</h2>
-        <p>Because your bookmarks live on your device, you control them directly: edit or delete any item at any time, and uninstall the app to remove its local data. Depending on where you live (for example under the GDPR or CCPA), you may have additional rights regarding the limited analytics/diagnostic data processed by Google Firebase, such as the right to access, object to, or request deletion of it. To make such a request, or if you have any privacy question, contact us using the details below and we will respond as required by applicable law.</p>
+        <p>Because your bookmarks live on your device, you control them directly: edit or delete any item at any time, and uninstall the app to remove its local data. Depending on where you live (for example under the GDPR or CCPA), you may have additional rights regarding the limited analytics/diagnostic data processed by Google Firebase, such as the right to access, object to, or request deletion of it. To make such a request, or if you have any privacy question, contact me using the details below and I will respond as reasonably practicable and as required by applicable law.</p>
 
         <h2 id="changes">11. Changes to this policy</h2>
-        <p>We may update this policy from time to time. Material changes will be reflected by updating the “Last updated” date above and, where appropriate, through an in-app notice. Continued use of the app after changes take effect constitutes acceptance of the updated policy.</p>
+        <p>I may update this policy from time to time. Material changes will be reflected by updating the “Last updated” date above and, where appropriate, through an in-app notice. Continued use of the app after changes take effect constitutes acceptance of the updated policy.</p>
 
         <h2 id="contact">12. Contact</h2>
-        <p>Questions about this policy or your data? Email us at <a href="mailto:privacy@getmaybelater.app">privacy@getmaybelater.app</a>.</p>
+        <p>Questions about this policy or your data? Email <a href="mailto:jaxvy@yahoo.com">jaxvy@yahoo.com</a>. This policy describes the app's data practices in good faith but is not legal advice.</p>
 
         <p class="muted" style="margin-top:2.5rem"><a href="./">&larr; Back to home</a></p>
       </article>

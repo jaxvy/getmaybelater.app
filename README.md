@@ -22,8 +22,10 @@ be hosted on **GitHub Pages** at the apex domain **getmaybelater.app**.
     └── img/            logo.svg, favicon.svg, og-image.svg
 ```
 
-No build step, no framework, no external requests — every page is self-contained
-and loads a single small stylesheet and script. To preview locally:
+No build step and no framework — every page is a self-contained HTML file that
+loads a single small stylesheet, a few KB of JS, and the web fonts (Space
+Grotesk, Inter, JetBrains Mono) from Google Fonts to match the app's type. To
+preview locally:
 
 ```bash
 python3 -m http.server 8000    # then open http://localhost:8000
@@ -33,33 +35,21 @@ python3 -m http.server 8000    # then open http://localhost:8000
 > meant to live at the apex domain root. Preview locally as above (served from
 > the repo root) rather than via the raw project-page URL.
 
-## ✅ Before you publish — content checklist
+## Content status
 
-The landing page, FAQ, and Privacy Policy are written to the app's real feature
-set. A few things still need your input before going live:
+The landing page, FAQ, Privacy Policy, and Terms of Use are written to the app's
+real feature set and to the current reality: **MaybeLater is a free app made by
+one independent developer** (no company), with all contact routed to
+`jaxvy@yahoo.com`. The legal pages are written conservatively to disclaim
+warranties and limit liability to the maximum extent the law allows.
 
-- [ ] **Google Play link** — the app isn't published yet, so buttons show
-      *"Coming soon"*. When the listing is live, find/replace the token
-      `PLAYSTORE_URL` in every `.html` file with the real URL, and delete the
-      `aria-disabled="true"` attribute on those links/badges.
-- [ ] **Contact emails** — replace `privacy@getmaybelater.app` /
-      `support@getmaybelater.app` with monitored addresses (Google Play requires
-      a working contact). Until domain email is set up, point these at any inbox
-      you check.
-- [ ] **Terms** (`terms.html`) — set the pricing model (§4), governing-law
-      jurisdiction (§8), and the "Last updated" date.
-- [ ] **Analytics disclosure (decision)** — the app currently has **no in-app
-      analytics opt-out**, so `privacy.html` §2.2/§9 state that Firebase
-      Analytics/Crashlytics run automatically. If you add a consent/opt-out
-      control (recommended for GDPR/CCPA markets), soften that wording to match.
-- [ ] **Support reply time** — set the expected turnaround in `support.html`
-      (currently `[2–3 business days]`).
-- [ ] **OG image (optional)** — `assets/img/og-image.svg` works, but some social
-      platforms only render raster images. Optionally export a 1200×630 **PNG**
-      and update the `og:image` URLs.
+The one remaining placeholder is the **Google Play link**: the app isn't
+published yet, so the download buttons show *"Coming soon"*. When the listing is
+live, find/replace the token `PLAYSTORE_URL` in every `.html` file with the real
+URL and delete the `aria-disabled="true"` attribute on those links/badges.
 
-> The Privacy Policy reflects the app's data practices as described, but it is
-> not legal advice — have it reviewed if you operate in regulated markets.
+> The Privacy Policy and Terms reflect the app's practices in good faith but are
+> not legal advice — have them reviewed if you operate in regulated markets.
 
 ## 🚀 Publishing to GitHub Pages
 
