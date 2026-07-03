@@ -1,28 +1,23 @@
 <!doctype html>
-<!--
-  MaybeLater — landing page
-  ---------------------------------------------------------------------------
-  Google Play link: the app is not published yet, so badges show "Coming soon".
-  When the listing is live, find/replace the token PLAYSTORE_URL across all
-  .html files with the real URL and delete the `aria-disabled="true"` attribute
-  on the badge(s)/button(s). See README.md.
-  ---------------------------------------------------------------------------
--->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MaybeLater — Save it now, read it later</title>
+<title>MaybeLater — Save it now, find it later</title>
 <meta name="description" content="MaybeLater is a private, local-first bookmark and read-later app for Android. Share any link and it's saved, enriched, tagged by on-device AI, and organized — fully offline.">
-<link rel="canonical" href="https://getmaybelater.app/">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
-<meta name="theme-color" content="#6c5ce7">
+<meta name="theme-color" content="#faf9f6">
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="MaybeLater — Save it now, read it later">
+<meta property="og:title" content="MaybeLater — Save it now, find it later">
 <meta property="og:description" content="A private, local-first bookmark app for Android. Share a link and it saves, enriches, and organizes itself — with on-device AI, reminders, and encrypted backup.">
-<meta property="og:url" content="https://getmaybelater.app/">
-<meta property="og:image" content="https://getmaybelater.app/assets/img/og-image.svg">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MaybeLater — Save it now, find it later">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script src="assets/js/main.js" defer></script>
 
@@ -34,7 +29,7 @@
     <nav class="nav" data-nav aria-label="Primary">
       <a class="brand" href="./">
         <img class="brand__mark" src="assets/img/logo.svg" alt="" width="30" height="30">
-        <span>MaybeLater</span>
+        <span>Maybe<span class="brand__later">Later</span></span>
       </a>
       <button class="nav__toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -57,10 +52,9 @@
       <div class="hero__grid">
         <div class="hero__copy">
           <span class="eyebrow">Private, local-first read-later for Android</span>
-          <h1>Save it now.<br>Read it <span style="color:var(--brand-600)">later</span>.</h1>
+          <h1>Save it now.<br>Find it <span class="accent">later</span>.</h1>
           <p class="hero__lead">MaybeLater turns “I'll get to it” into done. Share any link and it's saved, enriched with a title and thumbnail, tagged by on-device AI, and neatly organized — ready for whenever you are. Fully offline. Nothing to sign up for.</p>
           <div class="hero__cta">
-            <!-- Badge is "Coming soon" until the Play listing is live. Replace PLAYSTORE_URL + remove aria-disabled. -->
             <a class="badge-play" href="PLAYSTORE_URL" aria-disabled="true" aria-label="Coming soon to Google Play">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M3.6 2.3 13 11.7l2.6-2.6z"/><path fill="#4285F4" d="M3.1 2.1C3 2.3 3 2.6 3 2.9v18.2c0 .3 0 .6.1.8L13 12z"/><path fill="#34A853" d="M3.6 21.7 13 12.3l2.6 2.6-11 6.9c-.4.2-.7.1-1-.1z"/><path fill="#FBBC04" d="M20.5 10.6 16 8l-3 3 3 3 4.5-2.6c.8-.5.8-1.3 0-1.8z"/></svg>
               <span>
@@ -76,11 +70,27 @@
         <div class="hero__media" aria-hidden="true">
           <div class="phone">
             <div class="phone__screen">
-              <span class="phone__pill">Your library</span>
-              <div class="phone__row"><strong>Designing with Bento layouts</strong><span>#design · #ui · Summary ready</span></div>
-              <div class="phone__row"><strong>Kotlin coroutines, explained</strong><span>#android · Reminder · Sat 9:00</span></div>
-              <div class="phone__row"><strong>The economics of open source</strong><span>#reading · Unread</span></div>
-              <div class="phone__row"><strong>How Gemini Nano runs on-device</strong><span>#ai · Link healthy</span></div>
+              <div class="phone__brand">Maybe<span>Later</span></div>
+              <div class="phone__row" style="--row-accent:var(--accent)">
+                <strong>Designing with Bento layouts</strong>
+                <span class="url">smashingmagazine.com/bento</span>
+                <div class="phone__tags"><span class="tag--peach">#design</span><span class="tag--peri">#ui</span><span class="tag--coral">Summary ready</span></div>
+              </div>
+              <div class="phone__row" style="--row-accent:#5b66e0">
+                <strong>Kotlin coroutines, explained</strong>
+                <span class="url">kotlinlang.org/coroutines</span>
+                <div class="phone__tags"><span class="tag--mint">#android</span><span class="tag--butter">Reminder · Sat 9:00</span></div>
+              </div>
+              <div class="phone__row" style="--row-accent:#2fa060">
+                <strong>The economics of open source</strong>
+                <span class="url">github.blog/open-source</span>
+                <div class="phone__tags"><span class="tag--blush">#reading</span><span class="tag--peri">Unread</span></div>
+              </div>
+              <div class="phone__row" style="--row-accent:#e0518a">
+                <strong>How Gemini Nano runs on-device</strong>
+                <span class="url">ai.google.dev/gemini-nano</span>
+                <div class="phone__tags"><span class="tag--peri">#ai</span><span class="tag--mint">Link healthy</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -221,6 +231,10 @@
           <p>Android 10 (API level 29) and newer, on phones and tablets.</p>
         </details>
         <details>
+          <summary>What does MaybeLater cost?</summary>
+          <p>MaybeLater is free. There are no in-app purchases and no subscriptions — every feature, including on-device AI and encrypted backup to your own Google Drive, is included.</p>
+        </details>
+        <details>
           <summary>What data does MaybeLater collect?</summary>
           <p>Your bookmarks stay on your device. The app sends only anonymous, content-free usage analytics and crash reports (via Google Firebase) — never your URLs, titles, notes, or content. Full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
         </details>
@@ -255,9 +269,9 @@
       <div class="footer__brand">
         <a class="brand" href="./">
           <img class="brand__mark" src="assets/img/logo.svg" alt="" width="30" height="30">
-          <span>MaybeLater</span>
+          <span>Maybe<span class="brand__later">Later</span></span>
         </a>
-        <p>Save it now, read it later. A private, local-first bookmark and read-later app for Android.</p>
+        <p>Save it now, find it later. A private, local-first bookmark and read-later app for Android.</p>
       </div>
       <div class="footer__col">
         <h4>Product</h4>
@@ -268,11 +282,11 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Company</h4>
+        <h4>Legal &amp; help</h4>
         <ul class="stack">
           <li><a href="support.html">Support</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
     </div>

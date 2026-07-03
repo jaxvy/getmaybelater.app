@@ -1,11 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Maybe Later logo">
-  <defs>
-    <linearGradient id="ml-g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7d6cf0"/>
-      <stop offset="1" stop-color="#5a4bd4"/>
-    </linearGradient>
-  </defs>
-  <path fill="url(#ml-g)" d="M8 3.5A2.5 2.5 0 0 1 10.5 1h11A2.5 2.5 0 0 1 24 3.5V29a1 1 0 0 1-1.54.84L16 25.6l-6.46 4.24A1 1 0 0 1 8 29z"/>
-  <circle cx="16" cy="12" r="6" fill="#fff"/>
-  <path fill="none" stroke="#5a4bd4" stroke-width="1.6" stroke-linecap="round" d="M16 8.6V12l2.4 1.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MaybeLater logo">
+  <rect width="32" height="32" rx="8" fill="#FF5436"/>
+  <path fill="#FAF9F6" d="M9 9.2A2.2 2.2 0 0 1 11.2 7h9.6A2.2 2.2 0 0 1 23 9.2V25l-7-4-7 4z"/>
+  <path fill="none" stroke="#1A1814" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12.5 17.6v-6.2l3.5 4 3.5-4v6.2"/>
 </svg>
