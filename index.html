@@ -1,0 +1,283 @@
+<!--
+  MaybeLater — landing page
+  ---------------------------------------------------------------------------
+  Google Play link: the app is not published yet, so badges show "Coming soon".
+  When the listing is live, find/replace the token PLAYSTORE_URL across all
+  .html files with the real URL and delete the `aria-disabled="true"` attribute
+  on the badge(s)/button(s). See README.md.
+  ---------------------------------------------------------------------------
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaybeLater — Save it now, read it later</title>
+<meta name="description" content="MaybeLater is a private, local-first bookmark and read-later app for Android. Share any link and it's saved, enriched, tagged by on-device AI, and organized — fully offline.">
+<link rel="canonical" href="https://getmaybelater.app/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon.svg">
+<meta name="theme-color" content="#6c5ce7">
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="MaybeLater — Save it now, read it later">
+<meta property="og:description" content="A private, local-first bookmark app for Android. Share a link and it saves, enriches, and organizes itself — with on-device AI, reminders, and encrypted backup.">
+<meta property="og:url" content="https://getmaybelater.app/">
+<meta property="og:image" content="https://getmaybelater.app/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/main.js" defer></script>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ Header ============================ -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" data-nav aria-label="Primary">
+      <a class="brand" href="/">
+        <img class="brand__mark" src="/assets/img/logo.svg" alt="" width="30" height="30">
+        <span>MaybeLater</span>
+      </a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a class="btn btn--primary" href="PLAYSTORE_URL" aria-disabled="true">Get the app</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ============================ Hero ============================ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Private, local-first read-later for Android</span>
+          <h1>Save it now.<br>Read it <span style="color:var(--brand-600)">later</span>.</h1>
+          <p class="hero__lead">MaybeLater turns “I'll get to it” into done. Share any link and it's saved, enriched with a title and thumbnail, tagged by on-device AI, and neatly organized — ready for whenever you are. Fully offline. Nothing to sign up for.</p>
+          <div class="hero__cta">
+            <!-- Badge is "Coming soon" until the Play listing is live. Replace PLAYSTORE_URL + remove aria-disabled. -->
+            <a class="badge-play" href="PLAYSTORE_URL" aria-disabled="true" aria-label="Coming soon to Google Play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M3.6 2.3 13 11.7l2.6-2.6z"/><path fill="#4285F4" d="M3.1 2.1C3 2.3 3 2.6 3 2.9v18.2c0 .3 0 .6.1.8L13 12z"/><path fill="#34A853" d="M3.6 21.7 13 12.3l2.6 2.6-11 6.9c-.4.2-.7.1-1-.1z"/><path fill="#FBBC04" d="M20.5 10.6 16 8l-3 3 3 3 4.5-2.6c.8-.5.8-1.3 0-1.8z"/></svg>
+              <span>
+                <span class="badge-play__sub">Coming soon to</span>
+                <span class="badge-play__main">Google Play</span>
+              </span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="/#features">See what it does</a>
+          </div>
+          <p class="hero__note">Android 10 and up · Works offline · No account needed</p>
+        </div>
+
+        <div class="hero__media" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__screen">
+              <span class="phone__pill">Your library</span>
+              <div class="phone__row"><strong>Designing with Bento layouts</strong><span>#design · #ui · Summary ready</span></div>
+              <div class="phone__row"><strong>Kotlin coroutines, explained</strong><span>#android · Reminder · Sat 9:00</span></div>
+              <div class="phone__row"><strong>The economics of open source</strong><span>#reading · Unread</span></div>
+              <div class="phone__row"><strong>How Gemini Nano runs on-device</strong><span>#ai · Link healthy</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Feature cards ============================ -->
+  <section class="section section--subtle" id="features">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Features</span>
+        <h2>Everything a link needs, the moment you save it</h2>
+        <p>Capture, enrich, organize, and revisit — all on a single private device.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M8 7l4-4 4 4"/></svg></div>
+          <h3>Share to save</h3>
+          <p>Save any link straight from the Android share sheet, or paste one in. MaybeLater fetches the title, thumbnail, and description automatically — oEmbed for sites like YouTube and Vimeo, Open Graph for everything else.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M19 15l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg></div>
+          <h3>On-device AI</h3>
+          <p>Gemini Nano tags and summarizes each page right on your phone. Toggle it on and page content never touches an AI cloud service — with a heuristic fallback when a device can't run Nano.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg></div>
+          <h3>Organize your way</h3>
+          <p>Group links into collections, multi-tag them, and find anything with full-text search. Filter by unread, reminders, broken, or duplicates — and switch between a roomy list or a packed grid.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Reminders that stick</h3>
+          <p>Set a time to revisit any link and get a local notification. Reminders survive reboots and stay put until they actually fire — reading a bookmark never clears them by accident.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></div>
+          <h3>Broken-link checking</h3>
+          <p>Background health checks flag links that go dead — daily, weekly, biweekly, or monthly — so your library never rots. Filter to just the broken ones, or run a full check on demand.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Yours, and private</h3>
+          <p>Local-first and fully offline. Lock the app with a PIN and optional biometrics, and back up to your <em>own</em> Google Drive with end-to-end encryption. There's no MaybeLater server holding your data.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Alternating rows ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-row">
+        <div class="feature-row__copy">
+          <span class="eyebrow">Capture</span>
+          <h3>Share it once, get all the details</h3>
+          <p>Send a link from any app and MaybeLater does the rest — pulling in the page title, a thumbnail, and a description, and flagging duplicates when a link normalizes to one you already saved. Add URLs manually too, and edit the title, tags, collection, notes, and reminder any time.</p>
+        </div>
+        <div class="feature-row__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3M8 7l4-4 4 4"/></svg></div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row__copy">
+          <span class="eyebrow">Intelligence, on-device</span>
+          <h3>Smart tags and summaries that never leave your phone</h3>
+          <p>MaybeLater uses Gemini Nano and ML Kit to auto-tag saved pages (you choose the max number of tags) and to write a short summary you can skim before diving in — with live progress as it works. It's device-gated, so summaries only appear where Nano is supported, and page content stays entirely on the device.</p>
+        </div>
+        <div class="feature-row__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row__copy">
+          <span class="eyebrow">Find</span>
+          <h3>A library that organizes itself</h3>
+          <p>Browse by collection or by tag with live counts, run a full-text search, and slice the list with filters for All, Has-reminder, Unread, Read, Broken, or Duplicate. Sort by recency, pick a list or grid layout, and multi-select to act on bookmarks in bulk.</p>
+        </div>
+        <div class="feature-row__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-row__copy">
+          <span class="eyebrow">Peace of mind</span>
+          <h3>Private by default, backed up by choice</h3>
+          <p>Everything lives in an on-device database and works with no connection. Add an app lock — a PIN with optional fingerprint or face unlock and an auto-lock timeout — and turn on scheduled, end-to-end encrypted backups to your own Google Drive. Prefer files? Export and import your bookmarks as plain or password-encrypted JSON.</p>
+        </div>
+        <div class="feature-row__media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ How it works ============================ -->
+  <section class="section section--subtle" id="how">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">How it works</span>
+        <h2>Three taps from “save” to “sorted”</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <h3>Share or add</h3>
+          <p>Send a link from any app through the share sheet, or paste one in yourself.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <h3>It enriches &amp; files it</h3>
+          <p>MaybeLater fetches the details, adds on-device AI tags and a summary, and drops it into a collection.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <h3>Come back ready</h3>
+          <p>Set a reminder, filter to unread, or search — and pick up exactly where you left off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FAQ ============================ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Good questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Does MaybeLater work offline?</summary>
+          <p>Yes. It's local-first — every bookmark lives in an on-device database, so browsing, editing, and searching all work with no connection. The network is only used to fetch page metadata, run link-health checks, and (if you enable it) back up.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. There's no MaybeLater account and no MaybeLater server. Cloud backup is entirely optional and, when enabled, saves encrypted files to your <em>own</em> Google Drive.</p>
+        </details>
+        <details>
+          <summary>Is the AI private?</summary>
+          <p>Yes. Auto-tagging and summaries run on-device via Gemini Nano and ML Kit — the content of the pages you save is never sent to an AI cloud service. On devices that don't support Nano, tagging falls back to a local heuristic and summaries simply aren't shown.</p>
+        </details>
+        <details>
+          <summary>Which Android versions are supported?</summary>
+          <p>Android 10 (API level 29) and newer, on phones and tablets.</p>
+        </details>
+        <details>
+          <summary>What data does MaybeLater collect?</summary>
+          <p>Your bookmarks stay on your device. The app sends only anonymous, content-free usage analytics and crash reports (via Google Firebase) — never your URLs, titles, notes, or content. Full details are in the <a href="/privacy.html">Privacy Policy</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA band ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div class="cta-band__inner">
+          <h2>Your reading list, finally under control</h2>
+          <p>Stop losing links in a sea of open tabs. Save them to MaybeLater and get to them when you're ready.</p>
+          <a class="badge-play" href="PLAYSTORE_URL" aria-disabled="true" aria-label="Coming soon to Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M3.6 2.3 13 11.7l2.6-2.6z"/><path fill="#4285F4" d="M3.1 2.1C3 2.3 3 2.6 3 2.9v18.2c0 .3 0 .6.1.8L13 12z"/><path fill="#34A853" d="M3.6 21.7 13 12.3l2.6 2.6-11 6.9c-.4.2-.7.1-1-.1z"/><path fill="#FBBC04" d="M20.5 10.6 16 8l-3 3 3 3 4.5-2.6c.8-.5.8-1.3 0-1.8z"/></svg>
+            <span>
+              <span class="badge-play__sub">Coming soon to</span>
+              <span class="badge-play__main">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ Footer ============================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/">
+          <img class="brand__mark" src="/assets/img/logo.svg" alt="" width="30" height="30">
+          <span>MaybeLater</span>
+        </a>
+        <p>Save it now, read it later. A private, local-first bookmark and read-later app for Android.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Product</h4>
+        <ul class="stack">
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#how">How it works</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul class="stack">
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> MaybeLater. All rights reserved.</span>
+      <span>Made for people with too many tabs.</span>
+    </div>
+  </div>
+</footer>

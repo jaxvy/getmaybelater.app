@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getmaybelater.app/sitemap.xml
