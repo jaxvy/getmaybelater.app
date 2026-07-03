@@ -1,5 +1,5 @@
 /* =============================================================================
-   MaybeLater — "Bento Pop" design system & styles
+   MaybeLater "Bento Pop" design system & styles
    Single stylesheet, no build step. Organized as:
    1. Design tokens (CSS custom properties)
    2. Base / reset
@@ -14,12 +14,12 @@
 
 /* 1. ---------- Design tokens ------------------------------------------------ */
 :root {
-  /* Brand — coral accent */
+  /* Brand: coral accent */
   --accent:       #ff5436;   /* logo, labels, primary actions */
   --accent-600:   #e8412a;   /* hover */
   --accent-soft:  #ffe0d8;   /* tinted fills */
 
-  /* Neutrals — Bento Pop (light only) */
+  /* Neutrals: Bento Pop (light only) */
   --paper:        #faf9f6;   /* screen background (cream paper) */
   --surface:      #ffffff;   /* cards, fields, elevated surfaces */
   --ink:          #1a1814;   /* primary text, borders, headings */
@@ -190,7 +190,7 @@ li { margin: 0.35em 0; }
 .badge-play__main { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; line-height: 1.15; }
 .badge-play[aria-disabled="true"] { opacity: 0.6; pointer-events: none; }
 
-/* Cards — bento pastel tiles */
+/* Cards: bento pastel tiles */
 .card {
   --card-bg: var(--surface); --card-ink: var(--ink);
   background: var(--card-bg); color: var(--card-ink);
