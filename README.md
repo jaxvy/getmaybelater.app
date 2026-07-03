@@ -1,8 +1,8 @@
-# MaybeLater — website
+# MaybeLater website
 
 Marketing + legal website for the **MaybeLater** Android app. It's a fast,
 dependency-light static site (plain HTML + one CSS file + a few KB of JS),
-designed to be hosted on **GitHub Pages**. No custom domain is wired up yet — the
+designed to be hosted on **GitHub Pages**. No custom domain is wired up yet; the
 site works as-is from the GitHub Pages project URL, and a domain can be added
 later (see below).
 
@@ -23,7 +23,7 @@ later (see below).
     └── img/            logo.svg, favicon.svg, og-image.png, og-image.svg
 ```
 
-No build step and no framework — every page is a self-contained HTML file that
+No build step and no framework: every page is a self-contained HTML file that
 loads a single small stylesheet, a few KB of JS, and the web fonts (Space
 Grotesk, Inter, JetBrains Mono) from Google Fonts to match the app's type. To
 preview locally:
@@ -33,14 +33,14 @@ python3 -m http.server 8000    # then open http://localhost:8000
 ```
 
 > All asset and page links are **relative** (`assets/...`, `privacy.html`), so
-> the site renders correctly wherever it's served — a GitHub Pages project URL
-> or a custom domain — with no absolute URLs to update.
+> the site renders correctly wherever it's served (a GitHub Pages project URL
+> or a custom domain) with no absolute URLs to update.
 
 ## Content status
 
 The landing page, FAQ, Privacy Policy, and Terms of Use are written to the app's
-real feature set and to the current reality: **MaybeLater is a free app made by
-one independent developer** (no company), with all contact routed to
+real feature set and to the current reality: **MaybeLater is a free app from an
+independent solo developer** (no company), with all contact routed to
 `jaxvy@yahoo.com`. The legal pages are written conservatively to disclaim
 warranties and limit liability to the maximum extent the law allows.
 
@@ -50,7 +50,7 @@ live, find/replace the token `PLAYSTORE_URL` in every `.html` file with the real
 URL and delete the `aria-disabled="true"` attribute on those links/badges.
 
 > The Privacy Policy and Terms reflect the app's practices in good faith but are
-> not legal advice — have them reviewed if you operate in regulated markets.
+> not legal advice; have them reviewed if you operate in regulated markets.
 
 ## 🚀 Publishing to GitHub Pages
 
@@ -69,7 +69,7 @@ No domain is configured yet. **Once you buy one**, wire it up and then restore t
 absolute URLs the SEO/social tags need:
 
 1. **Settings → Pages → Custom domain** → enter your domain → **Save**.
-   (This creates a `CNAME` file in the repo — leave it in place.)
+   (This creates a `CNAME` file in the repo; leave it in place.)
 2. At your DNS provider, point the **apex** domain at GitHub Pages with four
    `A` records:
    ```

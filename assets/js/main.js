@@ -1,4 +1,4 @@
-// Maybe Later — minimal progressive enhancement.
+// Maybe Later: minimal progressive enhancement.
 // The site is fully functional without JS; this only adds niceties.
 (function () {
   "use strict";
