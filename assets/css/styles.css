@@ -110,6 +110,29 @@ li { margin: 0.35em 0; }
 }
 .section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 .section--subtle { background: var(--surface); }
+/* Spotlight band: lifts the "Private by design" section above the plain and
+   white sections around it, signalling privacy as a headline feature. */
+.section--spotlight {
+  position: relative;
+  background:
+    radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--paper), color-mix(in srgb, var(--accent-soft) 55%, var(--paper)));
+  border-block: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.section--spotlight .section__head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
+.section--spotlight .section__head p strong { color: var(--ink); }
+/* Badge that labels the section as a feature category, not just an eyebrow */
+.spotlight-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent-600);
+  background: color-mix(in srgb, var(--accent-soft) 70%, #fff);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  padding: 0.4rem 0.9rem; border-radius: 999px; margin-bottom: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+.spotlight-badge svg { width: 15px; height: 15px; }
 .section__head { max-width: 46rem; margin: 0 auto clamp(2rem, 5vw, 3.25rem); text-align: center; }
 .section__head h2 { font-size: var(--fs-h2); }
 .section__head p { color: var(--muted); font-size: 1.125rem; margin: 0; }
@@ -209,12 +232,21 @@ li { margin: 0.35em 0; }
 .card p { color: var(--card-ink); opacity: 0.86; margin: 0; font-size: var(--fs-small); }
 
 /* Bento palette rotation across the feature grid */
-.grid .card:nth-child(6n+1) { --card-bg: var(--peach-bg);  --card-ink: var(--peach-ink); }
-.grid .card:nth-child(6n+2) { --card-bg: var(--peri-bg);   --card-ink: var(--peri-ink); }
-.grid .card:nth-child(6n+3) { --card-bg: var(--mint-bg);   --card-ink: var(--mint-ink); }
-.grid .card:nth-child(6n+4) { --card-bg: var(--blush-bg);  --card-ink: var(--blush-ink); }
-.grid .card:nth-child(6n+5) { --card-bg: var(--butter-bg); --card-ink: var(--butter-ink); }
-.grid .card:nth-child(6n+6) { --card-bg: var(--sky-bg);    --card-ink: var(--sky-ink); }
+.grid--feature .card:nth-child(6n+1) { --card-bg: var(--peach-bg);  --card-ink: var(--peach-ink); }
+.grid--feature .card:nth-child(6n+2) { --card-bg: var(--peri-bg);   --card-ink: var(--peri-ink); }
+.grid--feature .card:nth-child(6n+3) { --card-bg: var(--mint-bg);   --card-ink: var(--mint-ink); }
+.grid--feature .card:nth-child(6n+4) { --card-bg: var(--blush-bg);  --card-ink: var(--blush-ink); }
+.grid--feature .card:nth-child(6n+5) { --card-bg: var(--butter-bg); --card-ink: var(--butter-ink); }
+.grid--feature .card:nth-child(6n+6) { --card-bg: var(--sky-bg);    --card-ink: var(--sky-ink); }
+
+/* Privacy cards: one cohesive, elevated treatment (not the rainbow bento),
+   so the section reads as flagship features rather than marketing copy. */
+.card--privacy {
+  --card-bg: var(--surface); --card-ink: var(--ink);
+  border-color: color-mix(in srgb, var(--accent) 20%, var(--rule));
+  box-shadow: var(--shadow-md);
+}
+.card--privacy .card__icon { background: var(--accent-soft); color: var(--accent-600); }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--rule); background: var(--surface); padding-block: 3rem; }
