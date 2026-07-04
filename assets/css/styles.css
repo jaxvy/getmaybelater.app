@@ -240,25 +240,13 @@ li { margin: 0.35em 0; }
 .grid--feature .card:nth-child(6n+6) { --card-bg: var(--sky-bg);    --card-ink: var(--sky-ink); }
 
 /* Privacy cards: one cohesive, elevated treatment (not the rainbow bento),
-   each explicitly tagged as a feature so the section reads as flagship
-   features rather than just marketing copy. */
+   so the section reads as flagship features rather than marketing copy. */
 .card--privacy {
-  position: relative;
   --card-bg: var(--surface); --card-ink: var(--ink);
   border-color: color-mix(in srgb, var(--accent) 20%, var(--rule));
   box-shadow: var(--shadow-md);
 }
 .card--privacy .card__icon { background: var(--accent-soft); color: var(--accent-600); }
-.card__tag {
-  position: absolute; top: 1rem; right: 1rem;
-  display: inline-flex; align-items: center; gap: 0.3rem;
-  font-family: var(--font-display); font-size: 0.625rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--accent-600); background: color-mix(in srgb, var(--accent-soft) 55%, #fff);
-  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
-  padding: 0.25rem 0.55rem 0.25rem 0.45rem; border-radius: 999px;
-}
-.card__tag svg { width: 12px; height: 12px; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--rule); background: var(--surface); padding-block: 3rem; }
