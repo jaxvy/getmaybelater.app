@@ -304,6 +304,7 @@ li { margin: 0.35em 0; }
 .feature-row__media--peri  { background: var(--peri-bg); }
 .feature-row__media--mint  { background: var(--mint-bg); }
 .feature-row__media--blush { background: var(--blush-bg); }
+.feature-row__media--butter { background: var(--butter-bg); }
 .feature-row__media .device { width: min(240px, 62vw); }
 .feature-row h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
 .feature-row p { color: var(--ink-2); margin: 0; }
