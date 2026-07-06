@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MaybeLater">
-  <rect width="32" height="32" rx="8" fill="#FF5436"/>
-  <path fill="#FAF9F6" d="M9 9.2A2.2 2.2 0 0 1 11.2 7h9.6A2.2 2.2 0 0 1 23 9.2V25l-7-4-7 4z"/>
-  <path fill="none" stroke="#1A1814" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12.5 17.6v-6.2l3.5 4 3.5-4v6.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="MaybeLater">
+  <rect width="108" height="108" rx="27" fill="#FF5436"/>
+  <g transform="translate(16.2,16.2) scale(0.70)">
+    <path fill="#F7F4EE" d="M30.2,21.6 h47.5 a4.3,4.3 0 0 1 4.3,4.3 v64.8 L54.0,74.5 25.9,90.7 V25.9 a4.3,4.3 0 0 1 4.3,-4.3 z"/>
+  </g>
+  <g transform="translate(5.4,8.5) scale(0.90)">
+    <path fill="#1A1814" d="M40.2,60.4 L40.2,34.7 L49.2,34.7 L53.7,57.1 L54.3,57.1 L58.8,34.7 L67.8,34.7 L67.8,60.4 L63.1,60.4 L63.1,38.2 L62.4,38.2 L58.0,60.4 L50.0,60.4 L45.6,38.2 L44.9,38.2 L44.9,60.4 Z"/>
+  </g>
 </svg>
