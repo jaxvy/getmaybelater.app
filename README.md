@@ -44,10 +44,9 @@ independent solo developer** (no company), with all contact routed to
 `jaxvy@yahoo.com`. The legal pages are written conservatively to disclaim
 warranties and limit liability to the maximum extent the law allows.
 
-The one remaining placeholder is the **Google Play link**: the app isn't
-published yet, so the download buttons show *"Coming soon"*. When the listing is
-live, find/replace the token `PLAYSTORE_URL` in every `.html` file with the real
-URL and delete the `aria-disabled="true"` attribute on those links/badges.
+The app is live on Google Play, and every download button and badge links to the
+listing at
+<https://play.google.com/store/apps/details?id=com.jaxvy.maybelater>.
 
 > The Privacy Policy and Terms reflect the app's practices in good faith but are
 > not legal advice; have them reviewed if you operate in regulated markets.
