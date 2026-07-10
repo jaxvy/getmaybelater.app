@@ -10,17 +10,18 @@
   "use strict";
 
   window.I18N_META = {
-    // Order shown in the picker.
+    // Order shown in the picker. Languages are labeled by name (endonym) only,
+    // not flags — a language isn't tied to one country.
     langs: [
-      { code: "en", flag: "🇬🇧", name: "English" },
-      { code: "es", flag: "🇪🇸", name: "Español" },
-      { code: "fr", flag: "🇫🇷", name: "Français" },
-      { code: "de", flag: "🇩🇪", name: "Deutsch" },
-      { code: "it", flag: "🇮🇹", name: "Italiano" },
-      { code: "tr", flag: "🇹🇷", name: "Türkçe" },
-      { code: "ru", flag: "🇷🇺", name: "Русский" },
-      { code: "zh", flag: "🇨🇳", name: "中文" },
-      { code: "ja", flag: "🇯🇵", name: "日本語" }
+      { code: "en", name: "English" },
+      { code: "es", name: "Español" },
+      { code: "fr", name: "Français" },
+      { code: "de", name: "Deutsch" },
+      { code: "it", name: "Italiano" },
+      { code: "tr", name: "Türkçe" },
+      { code: "ru", name: "Русский" },
+      { code: "zh", name: "中文" },
+      { code: "ja", name: "日本語" }
     ],
     // IANA timezone -> language, used as an on-device location proxy when the
     // browser's own language list doesn't match a supported language. Read from
