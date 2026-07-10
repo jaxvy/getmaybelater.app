@@ -1,10 +1,11 @@
 // MaybeLater: translation dictionaries + language metadata.
 // Plain data only. assets/js/main.js reads window.I18N / window.I18N_META,
 // applies the strings to [data-i18n*] elements, and picks a default language
-// from the visitor's geolocation (falling back to browser language, then
-// English). Proper nouns (MaybeLater, Google Play, Google Drive, Android,
-// YouTube, Vimeo, Gemini Nano, ML Kit, Google Firebase, oEmbed, Open Graph,
-// JSON, Wi-Fi) are left untranslated on purpose.
+// from on-device signals only (browser languages, then the device timezone as
+// a location proxy), falling back to English. No network requests are made.
+// Proper nouns (MaybeLater, Google Play, Google Drive, Android, YouTube, Vimeo,
+// Gemini Nano, ML Kit, Google Firebase, oEmbed, Open Graph, JSON, Wi-Fi) are
+// left untranslated on purpose.
 (function () {
   "use strict";
 
@@ -21,29 +22,49 @@
       { code: "zh", flag: "🇨🇳", name: "中文" },
       { code: "ja", flag: "🇯🇵", name: "日本語" }
     ],
-    // ISO 3166-1 alpha-2 country code -> language. Anything not listed here
-    // (e.g. US, GB, CA, AU, IN, BR-Portuguese, NL) falls back to English.
-    countryToLang: {
+    // IANA timezone -> language, used as an on-device location proxy when the
+    // browser's own language list doesn't match a supported language. Read from
+    // Intl.DateTimeFormat().resolvedOptions().timeZone — no network needed.
+    // Anything not listed (e.g. America/New_York, Europe/London, Asia/Kolkata,
+    // America/Sao_Paulo) falls back to English.
+    tzToLang: {
       // Spanish
-      ES: "es", MX: "es", AR: "es", CO: "es", PE: "es", VE: "es", CL: "es",
-      EC: "es", GT: "es", CU: "es", BO: "es", DO: "es", HN: "es", PY: "es",
-      SV: "es", NI: "es", CR: "es", PA: "es", UY: "es", PR: "es", GQ: "es",
+      "Europe/Madrid": "es", "Africa/Ceuta": "es", "Atlantic/Canary": "es",
+      "America/Mexico_City": "es", "America/Cancun": "es", "America/Monterrey": "es",
+      "America/Tijuana": "es", "America/Hermosillo": "es",
+      "America/Argentina/Buenos_Aires": "es", "America/Argentina/Cordoba": "es",
+      "America/Argentina/Mendoza": "es", "America/Bogota": "es", "America/Lima": "es",
+      "America/Caracas": "es", "America/Santiago": "es", "America/Guayaquil": "es",
+      "America/Guatemala": "es", "America/Havana": "es", "America/La_Paz": "es",
+      "America/Santo_Domingo": "es", "America/Tegucigalpa": "es", "America/Asuncion": "es",
+      "America/El_Salvador": "es", "America/Managua": "es", "America/Costa_Rica": "es",
+      "America/Panama": "es", "America/Montevideo": "es", "America/Puerto_Rico": "es",
       // French
-      FR: "fr", BE: "fr", LU: "fr", MC: "fr", SN: "fr", CI: "fr", ML: "fr",
-      BF: "fr", NE: "fr", TG: "fr", BJ: "fr", GA: "fr", CG: "fr", CD: "fr",
-      CM: "fr", MG: "fr", GN: "fr",
+      "Europe/Paris": "fr", "Europe/Brussels": "fr", "Europe/Luxembourg": "fr",
+      "Europe/Monaco": "fr", "Africa/Dakar": "fr", "Africa/Abidjan": "fr",
+      "Africa/Bamako": "fr", "Africa/Ouagadougou": "fr", "Africa/Niamey": "fr",
+      "Africa/Lome": "fr", "Africa/Porto-Novo": "fr", "Africa/Libreville": "fr",
+      "Africa/Brazzaville": "fr", "Africa/Kinshasa": "fr", "Africa/Douala": "fr",
+      "Africa/Conakry": "fr", "Indian/Antananarivo": "fr",
       // German
-      DE: "de", AT: "de", CH: "de", LI: "de",
+      "Europe/Berlin": "de", "Europe/Vienna": "de", "Europe/Zurich": "de",
+      "Europe/Busingen": "de", "Europe/Vaduz": "de",
       // Italian
-      IT: "it", SM: "it", VA: "it",
+      "Europe/Rome": "it", "Europe/San_Marino": "it", "Europe/Vatican": "it",
       // Turkish
-      TR: "tr",
+      "Europe/Istanbul": "tr", "Asia/Istanbul": "tr",
       // Russian
-      RU: "ru", BY: "ru", KZ: "ru", KG: "ru",
+      "Europe/Moscow": "ru", "Europe/Kaliningrad": "ru", "Europe/Samara": "ru",
+      "Europe/Volgograd": "ru", "Europe/Saratov": "ru", "Europe/Astrakhan": "ru",
+      "Asia/Yekaterinburg": "ru", "Asia/Omsk": "ru", "Asia/Novosibirsk": "ru",
+      "Asia/Krasnoyarsk": "ru", "Asia/Irkutsk": "ru", "Asia/Yakutsk": "ru",
+      "Asia/Vladivostok": "ru", "Asia/Magadan": "ru", "Asia/Kamchatka": "ru",
+      "Europe/Minsk": "ru", "Asia/Almaty": "ru", "Asia/Bishkek": "ru",
       // Chinese
-      CN: "zh", HK: "zh", TW: "zh", MO: "zh", SG: "zh",
+      "Asia/Shanghai": "zh", "Asia/Urumqi": "zh", "Asia/Hong_Kong": "zh",
+      "Asia/Taipei": "zh", "Asia/Macau": "zh", "Asia/Singapore": "zh",
       // Japanese
-      JP: "ja"
+      "Asia/Tokyo": "ja"
     }
   };
 
