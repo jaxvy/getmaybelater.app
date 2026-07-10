@@ -2,6 +2,15 @@
 <!-- GitHub Pages serves this for unknown paths. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Language shortcut links: /tr, /es, /ja … -> home in that language.
+  // (GitHub Pages has no real file at those paths, so they land here first.)
+  (function () {
+    var codes = { en: 1, es: 1, fr: 1, de: 1, it: 1, tr: 1, ru: 1, zh: 1, ja: 1 };
+    var seg = location.pathname.replace(/^\/+/, "").split("/")[0].toLowerCase();
+    if (codes[seg]) location.replace((seg === "en" ? "/" : "/?lang=" + seg) + location.hash);
+  })();
+</script>
 <title>Page not found · MaybeLater</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">

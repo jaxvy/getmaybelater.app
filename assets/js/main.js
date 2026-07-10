@@ -92,20 +92,51 @@
     return null;
   }
 
-  // React to a manual choice from the picker (and remember it).
+  // A shareable language link: ?lang=tr (or a /tr path segment, which the 404
+  // page rewrites to ?lang=tr). An explicit URL wins over a saved choice so a
+  // shared link always opens in its intended language.
+  function fromUrl() {
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q) { q = q.toLowerCase(); if (DICT[q]) return q; }
+      var seg = location.pathname.replace(/^\/+/, "").split("/")[0].toLowerCase();
+      if (seg && DICT[seg]) return seg;
+    } catch (e) {}
+    return null;
+  }
+
+  // Keep the address bar's ?lang= in sync with the current language, so the URL
+  // is always copy-shareable. English (the default) drops the param entirely.
+  function syncUrl(lang) {
+    try {
+      var url = new URL(location.href);
+      if (lang === DEFAULT_LANG) url.searchParams.delete("lang");
+      else url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+    } catch (e) {}
+  }
+
+  // React to a manual choice from the picker (remember it and update the URL).
   if (select) {
     select.addEventListener("change", function () {
       var lang = select.value;
       try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
       apply(lang);
+      syncUrl(lang);
     });
   }
 
   var saved = null;
   try { saved = localStorage.getItem(STORE_KEY); } catch (e) {}
 
-  if (saved && DICT[saved]) {
-    // Honor the visitor's explicit choice.
+  var fromLink = fromUrl();
+  if (fromLink) {
+    // An explicit ?lang= link: honor it, remember it, and normalize the URL.
+    apply(fromLink);
+    try { localStorage.setItem(STORE_KEY, fromLink); } catch (e) {}
+    syncUrl(fromLink);
+  } else if (saved && DICT[saved]) {
+    // Honor the visitor's previous choice.
     apply(saved);
   } else {
     // The browser's language list is the most direct signal for which
